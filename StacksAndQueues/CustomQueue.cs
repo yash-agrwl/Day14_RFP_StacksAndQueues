@@ -40,6 +40,22 @@ namespace StacksAndQueues
             Console.WriteLine("{0} inserted into Queue", node.Data);
         }
 
+        public void Dequeue()
+        {
+            if (this.Head == null) // Checks if the Queue is empty or not.
+            {
+                Console.WriteLine("Dequeue Insuccessful as Queue is empty.");
+                return;
+            }
+
+            Node<T> temp = this.Head;
+
+            this.Head = temp.Next;
+            temp.Next = null;
+
+            Console.WriteLine($"{temp.Data} removed from the queue.");
+        }
+
         /// <summary>
         /// Prints the elements of the <see cref="CustomQueue{T}"/> into the Console from first to last.
         /// </summary>
@@ -59,7 +75,7 @@ namespace StacksAndQueues
                 Console.Write(temp.Data + " "); // Prints the data of the node pointed by the temp.
                 temp = temp.Next; // Makes temp to point to the next element in the Queue.
             }
-            Console.WriteLine();
+            Console.WriteLine("\n");
         }
     }
 }

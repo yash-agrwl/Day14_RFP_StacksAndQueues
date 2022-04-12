@@ -53,6 +53,14 @@ namespace StacksAndQueues
                     Console.WriteLine("\n    After Calling Enqueue Method");
                     Console.WriteLine("------------------------------------\n");
                     queue.Display(); // Calling Display method to print all the elements of the queue.
+
+                    Console.WriteLine("\tDequeue Method Call");
+                    Console.WriteLine("------------------------------------\n");
+                    queue.Dequeue();
+
+                    Console.WriteLine("\n    After Calling Dequeue Method");
+                    Console.WriteLine("------------------------------------\n");
+                    queue.Display(); // Calling Display method to print all the elements of the queue.
                     break;
 
                 default:
